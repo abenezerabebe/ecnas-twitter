@@ -40,7 +40,7 @@ export default function Tweet({
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.actions}>
-        <Share url={link.url} options={{ hashtags, text, size: "large" }} />
+        <Share url={link.url.length && link.url} options={{ hashtags, text, size: "large" }} />
         {name}
       </CardActions>
     </Card>
