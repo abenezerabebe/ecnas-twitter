@@ -18,7 +18,7 @@ export const query = graphql`
   }
 `;
 
-export default class extends React.Component {
+export default class Index extends React.Component {
   state = {
     story: {
       content: JSON.parse(this.props.data.storyblokEntry.content)
