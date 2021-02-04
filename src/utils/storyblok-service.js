@@ -54,7 +54,6 @@ class StoryblokService {
 
       // this will alter the state and replaces the current story with a current raw story object (no resolved relations or links)
       window.storyblok.on("input", (event) => {
-        console.log(event.story.content._uid);
         if (
           event.story &&
           event.story.content._uid === reactComponent.state.story.content._uid
