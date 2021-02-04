@@ -29,7 +29,7 @@ export default function Tweet({
   return (
     <Card className={classes.root}>
       <CardActionArea component="a" href={link.url}>
-        <CardMedia className={classes.media} image={image.url} title={title} />
+        <CardMedia className={classes.media} image={image.url || undefined} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
@@ -40,7 +40,7 @@ export default function Tweet({
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.actions}>
-        <Share url={link.url.length && link.url} options={{ hashtags, text, size: "large" }} />
+        <Share url={link.url || undefined} options={{ hashtags, text, size: "large" }} />
         {name}
       </CardActions>
     </Card>
